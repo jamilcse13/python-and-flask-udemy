@@ -19,7 +19,8 @@ print("range(start, stop, step)")
 for num in range(1,6,2):
     print(num)
 else:
-    print('good bye!')
+    print('end of for loop')
+print('good bye!')
 
 
 ## iterating by sequesnce index
