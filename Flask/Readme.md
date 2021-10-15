@@ -26,3 +26,22 @@
 - It is the protocol to exchange or transfer hypertext
 - The HTTP/1.0 specification defined the GET, POST and HEAD methods
 - The HTTP/1.0 specification added 5 new methods: OPTIONS, PUT, DELETE, TRACE and CONNECT
+
+# Templates
+- we can render html files from python file using render_templates. for this we need store the html files inside a templates folder.
+- we can render js and css files from html file usinf url_for('static', file_name='file name'). for this we need store the js and css files inside a static folder.
+
+# Requests
+- We can handle given input request parameters in python using some attributes of request onbject:
+    - Form: POST and PUT method
+    - args: GET method
+    - values: combination of Form and args
+    - cookies: contents of all cookies transmitted with the request
+    - headers: the incoming request headers as a dictionary like object
+    - data: contains incoming request data as string, mimetype doesn't handle by this
+    - files: handle uploaded files of POST or PUT request.
+    - save(): to store data
+    - environ: the underlying WSGI env
+    - method: which current request method is used (POST, GET etc)
+    - module: the name of the current module
+    - routing_exception = None: this is similar NotFound exception or something similar, if matching url is failed
