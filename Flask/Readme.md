@@ -13,3 +13,9 @@
 - install flask using: "pip install flask"
 - activate virtual environment using: "source venv/bin/activate"
 - flask environment is ready
+
+# Run the Project
+- @app.route('define the route.url')
+- app.run(host=localhost, debug=False, port=5000) with default value
+- we can modify the app.run
+- if use put debug=True, then the updated code will execute without restart the server again.
