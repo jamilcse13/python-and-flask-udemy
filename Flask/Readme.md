@@ -19,3 +19,10 @@
 - app.run(host=localhost, debug=False, port=5000) with default value
 - we can modify the app.run
 - if use put debug=True, then the updated code will execute without restart the server again.
+
+# HTTP: Hypertext Transfer Protocol
+- It is an application protocol for distributed, collaborate, hypermedia information systems
+- It is the foundation of data communication for the World Wide Web
+- It is the protocol to exchange or transfer hypertext
+- The HTTP/1.0 specification defined the GET, POST and HEAD methods
+- The HTTP/1.0 specification added 5 new methods: OPTIONS, PUT, DELETE, TRACE and CONNECT
