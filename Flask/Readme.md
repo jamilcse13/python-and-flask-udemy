@@ -45,3 +45,13 @@
     - method: which current request method is used (POST, GET etc)
     - module: the name of the current module
     - routing_exception = None: this is similar NotFound exception or something similar, if matching url is failed
+
+# Cookies
+- A cookie is stored on client's computer as a text file
+- it's purpose is to remember nad track data pertaning to client's usage for better visitor experience and site statistics
+- request object contains a cookies attribute
+- it is a dictionary object of all cookie variable
+- In Flask, cookies are set on response object
+- make_response(): to get response object from return value of a view function
+- set_cookie(key, value): it uses to store a cookie by key-value
+- get(key): it is used to read a cookie, get the value
