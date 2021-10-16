@@ -71,3 +71,8 @@
     - Flask will take the values we put into the session object and serialize then into a cookie
     - sometimes we are not getting clear error message. this time we should check the size of the cookie in our page responses compared to the size supported by web browser.
 
+# Redirect and Abort
+- it returns a response object and redirects user to another target location with specified status code
+- Prototype of redirect(): Flask.redirect(location, statuscode = 302, response)
+- Flask class has abort() function to early exit, with an error code
+- Flask.abort(code)
