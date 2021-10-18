@@ -8,6 +8,15 @@ app = Flask(__name__)
 def index():
     return render_template('home.html')
 
+@app.route('/table')
+def table():
+    con = sql.connect("database.db")
+    cur = con.cursor()
+    print("Opened database successfully")
+    cur.execute('CREATE TABLE students (name text, addr text, city text, pin text)')
+    con.close()
+    return "Table created successfully"
+
 @app.route('/enternew')
 def new_student():
     return render_template('student.html')
