@@ -84,3 +84,9 @@
 - 'from werkzeug.utils import secure_filename' in python file
 - for getting the file, use f= request.files['file']
 - for saving the file, use f.save(secure_filename(f.filename))
+
+# Flask Extensions
+- Flask Mail: it provides SMTP interface to Flask application
+- Flask WTF: it adds rendering and validation of WTForms
+- Flask SQLAlchemy: it adds SQLAlchemy support to Flask application. it it maps the Database to the python program
+- Flask Sijax: Interface for SIjax - Python/jQuery library that makes AJAX easy to use in web applications
