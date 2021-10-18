@@ -90,3 +90,59 @@
 - Flask WTF: it adds rendering and validation of WTForms
 - Flask SQLAlchemy: it adds SQLAlchemy support to Flask application. it it maps the Database to the python program
 - Flask Sijax: Interface for SIjax - Python/jQuery library that makes AJAX easy to use in web applications
+
+## Flask Mail:
+- A web based application is often required to send mail to the users. Flask-Mail provides this support.
+- installation procedure: 
+    - pip install Flask-Mail
+    - Or, git clone https://github.com/mattupstate/flask-mail.git
+    - cd flask-mail
+    - python setup.py install
+- Configuring Flask-Mail
+    - MAIL_SERVER: Name/IP address of email server
+    - MAIL_PORT: Port number of server used
+    - MAIL_USE_TLS: Enable/disable Transport Security Layer encryption
+    - MAIL_USE_SSL: Enable/disable SSL encryption
+    - MAIL_DEBUG: Debug support
+    - MAIL_USERNAME: Username and password of sender
+    - MAIL_PASSWORD: ||
+    - MAIL_DEFAULT_SENDER: sets default sender
+    - MAIL_MAX_EMAILS: Sets maximum mails to be sent
+    - MAIL_SUPPRESS_SEND: Sending suppressed if app.testing set to true
+    - MAIL_ASCII_ATTACHMENTS: If true, attached filenames converted to ASCII
+### Mail Class:
+- it manages email messaging requirements. The class constructor takes following form: flask-mail.Mail(app=None)
+- Mail class methods:
+    - send(): sends contents of message class objects
+    - connect(): opens connection with mail host
+    - send_message(): sends message objects
+### Message Class:
+- it encapsulates an email message. Message class constructor has several parameters:
+- flask_mail.Message(subject, recipients, body, html, sender, cc, bcc, reply-to, date, charset, extra_headers, mail_options, rcpt_options)
+- Message clas methods:
+    - attach(): adds an attachment to message. The method takes following parameters:
+        - filename: name of file to attach
+        - content_type: MIME type of file
+        - data: raw file data
+        - disposition: content disposition, if any
+    - add_recipient(): adds another recipient to message
+
+### 
+Parameters:	
+- subject – email subject header
+- recipients – list of email addresses
+- body – plain text message
+- html – HTML message
+- sender – email sender address, or MAIL_DEFAULT_SENDER by default
+- cc – CC list
+- bcc – BCC list
+- attachments – list of Attachment instances
+- reply_to – reply-to address
+- date – send date
+- charset – message character set
+- extra_headers – A dictionary of additional headers for the message
+- mail_options – A list of ESMTP options to be used in MAIL FROM command
+- rcpt_options – A list of ESMTP options to be used in RCPT commands
+
+* if we want to use gmail smtp, then we should cofigure a setting through this link: https://www.google.com/settings/security/lesssecurityapps (the the google mail service doesn't allow mails to be sent by any third party appsication)
+* By default the setting is Turn off, we need it to Turn on
