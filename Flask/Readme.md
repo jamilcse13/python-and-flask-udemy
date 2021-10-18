@@ -76,3 +76,11 @@
 - Prototype of redirect(): Flask.redirect(location, statuscode = 302, response)
 - Flask class has abort() function to early exit, with an error code
 - Flask.abort(code)
+
+# File Uploading
+- include enctype = "multipart/form-data" isnide <form> tag
+- method will be POST
+- input type will be file
+- 'from werkzeug.utils import secure_filename' in python file
+- for getting the file, use f= request.files['file']
+- for saving the file, use f.save(secure_filename(f.filename))
