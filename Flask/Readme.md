@@ -146,3 +146,22 @@ Parameters:
 
 * if we want to use gmail smtp, then we should cofigure a setting through this link: https://www.google.com/settings/security/lesssecurityapps (the the google mail service doesn't allow mails to be sent by any third party appsication)
 * By default the setting is Turn off, we need it to Turn on
+
+## Flask WTF
+- Features
+    - Integration with WTForms.
+    - Secure Form with CSRF token.
+    - Global CSRF protection.
+    - reCAPTCHA support.
+    - File upload that works with Flask-Upload
+- installation procedure:
+    - pip install flask-WTF
+    - Or, git clone https://github.com/wtforms/flask-wtf
+    - pip install -e ./flask-wtf
+- WTForms pacage contains validator class. The commonly used validators are:
+    - DataRequired
+    - Email
+    - IPAdress
+    - Length
+    - NumberRange
+    - URL
