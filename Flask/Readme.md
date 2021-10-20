@@ -165,3 +165,16 @@ Parameters:
     - Length
     - NumberRange
     - URL
+
+# Flask SQLAlchemy
+- It is an ORM in python
+- installation procedure:
+    - pip install flask-sqlalchemy
+- The ORM's "handle" to the database is the Session
+- session object methods
+    - db.session.add(model obj): inserts a record into mapped table
+    - db.session.delete(model obj): deletes record from table
+    - model.query.all(): retrieves all records from table (select * from table)
+    - model.query.filter(condition): we can apply filter to retrieved record
+    - Students.query.filter_by(city=='Dhaka').all()
+
