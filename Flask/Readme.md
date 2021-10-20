@@ -178,3 +178,17 @@ Parameters:
     - model.query.filter(condition): we can apply filter to retrieved record
     - Students.query.filter_by(city=='Dhaka').all()
 
+
+# Deploying Flask Application:
+- Hosted platform offer free plan for small application:
+    - Heroku
+    - dotcloud
+    - webfaction
+
+### mod_wsgi
+- It is Apache HTTP server module that provides WSGI compliant intrface for hosting Python based web applications
+- To install mod_wsgi: pip install mod_wsgi
+- To verify that the installation was successful: mod_wsgi-express start-server
+
+### FastCGI
+- it is another deployment option for Flask application on web servers like nginix, lighttpd
